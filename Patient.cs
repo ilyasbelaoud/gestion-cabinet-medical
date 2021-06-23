@@ -9,7 +9,6 @@ namespace GestionCabinetMedical
     [Serializable]
     public class Patient
     {
-        private int cc;
         private int codePatient;
         private string nom;
         private string prenom;
