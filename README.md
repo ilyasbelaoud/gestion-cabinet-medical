@@ -1,7 +1,6 @@
 # Gestion Cabinet Medical
 
 ### A small application practicing what i have learned in c# , .NET frameworks, and oriented object programming.<br/>
-<br/>
 ### Tools:
 Visual studio 2019 - .NET Framwork - C# - Bunifu Framework - Stack overflow
 ---
