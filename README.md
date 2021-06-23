@@ -2,7 +2,8 @@
 ---
 ### A small application practicing what i have learned in c# , .NET framework, and oriented object programming.<br/>
 <br/>
-*The english version will be available soon.<br/>
+*The english version will be available soon.
+<br/>
 
 ![](https://github.com/ilyasbelaoud/gestion-cabinet-medical/blob/master/images/1.PNG)
 ![](https://github.com/ilyasbelaoud/gestion-cabinet-medical/blob/master/images/2.PNG)
