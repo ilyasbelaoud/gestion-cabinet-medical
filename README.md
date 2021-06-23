@@ -1,6 +1,6 @@
 # Gestion Cabinet Medical
 
-A small application practicing what i have learned in c# , .NET framework, and oriented object programming.
+A small application practicing what i have learned in c# , .NET framework, and oriented object programming.<br/>
 The english version will be available soon.
 
 ![](https://github.com/ilyasbelaoud/gestion-cabinet-medical/blob/master/images/1.PNG)
