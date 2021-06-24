@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 using System.Runtime.Serialization.Formatters.Binary;
 
 namespace GestionCabinetMedical
@@ -14,13 +15,71 @@ namespace GestionCabinetMedical
     [Serializable]
     public partial class Form1 : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+       (
+           int nLeftRect,     // x-coordinate of upper-left corner
+           int nTopRect,      // y-coordinate of upper-left corner
+           int nRightRect,    // x-coordinate of lower-right corner
+           int nBottomRect,   // y-coordinate of lower-right corner
+           int nWidthEllipse, // height of ellipse
+           int nHeightEllipse // width of ellipse
+       );
+
+        private Button currentButton;
+        private Form activeForm;
+
+
         CabinetMedical cbm = new CabinetMedical();
         public CabinetMedical Cbm { get => cbm; set => cbm = value; }
 
         public Form1()
         {
             InitializeComponent();
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
             this.timer1.Start();
+        }
+        private void ButtonActivate(object btnSender)
+        {
+            ButtonDisable();
+            if (btnSender != null)
+            {
+                if (currentButton != (Button)btnSender)
+                {
+                    currentButton = (Button)btnSender;
+                    pnlNav.Height = currentButton.Height;
+                    pnlNav.Top = currentButton.Top;
+                    pnlNav.Left = currentButton.Left;
+                    currentButton.BackColor = Color.FromArgb(46, 51, 73);
+                }
+            }
+        }
+        private void OpenChildForm(Form childForm, object btnSender)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            ButtonActivate(btnSender);
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panelMain.Controls.Add(childForm);
+            this.panelMain.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            this.lblTitle.Text = childForm.Text;
+        }
+        private void ButtonDisable()
+        {
+            foreach (Control btn in panelMenu.Controls)
+            {
+                if (btn.GetType() == typeof(Button))
+                {
+                    btn.BackColor = Color.FromArgb(24, 30, 54);
+                }
+            }
         }
 
         private void ChargerCombo()
@@ -51,14 +110,14 @@ namespace GestionCabinetMedical
         private void BtnPatient_Click(object sender, EventArgs e)
         {
             FormPatient fp = new FormPatient(this);
-            fp.ShowDialog();
+            OpenChildForm(fp, sender);
             this.Vider();
         }
 
         private void BtnRendezVous_Click(object sender, EventArgs e)
         {
             FormRendezVous fr = new FormRendezVous(this);
-            fr.ShowDialog();
+            OpenChildForm(fr, sender);
             this.Vider();
         }
 
@@ -129,6 +188,18 @@ namespace GestionCabinetMedical
         {
             this.lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
             this.lblToday.Text = DateTime.Now.ToString("dd MMMM yyyy");
+        }
+
+        private void BtnAbout_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormAbout(), sender);
+
+        }
+
+        private void BtnDashboard_Click(object sender, EventArgs e)
+        {
+            activeForm.Hide();
+            this.Show();
         }
     }
 }

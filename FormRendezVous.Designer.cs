@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gb3 = new System.Windows.Forms.GroupBox();
             this.dgRendezVous = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,6 +41,7 @@
             this.btnExporter = new System.Windows.Forms.Button();
             this.btnSupprimer = new System.Windows.Forms.Button();
             this.gb1 = new System.Windows.Forms.GroupBox();
+            this.cmbCodePatient = new System.Windows.Forms.ComboBox();
             this.txtObservation = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.cmbMinutes = new System.Windows.Forms.ComboBox();
             this.cmbHours = new System.Windows.Forms.ComboBox();
@@ -51,9 +52,7 @@
             this.lblDateRV = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblObservation = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.btnFermer = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.cmbCodePatient = new System.Windows.Forms.ComboBox();
             this.gb3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgRendezVous)).BeginInit();
             this.gb2.SuspendLayout();
@@ -85,14 +84,14 @@
             this.dgRendezVous.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.dgRendezVous.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgRendezVous.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Corbel", 11.25F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgRendezVous.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Corbel", 11.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgRendezVous.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgRendezVous.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgRendezVous.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -231,6 +230,20 @@
             this.gb1.TabIndex = 47;
             this.gb1.TabStop = false;
             // 
+            // cmbCodePatient
+            // 
+            this.cmbCodePatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbCodePatient.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCodePatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCodePatient.Font = new System.Drawing.Font("Corbel", 12F);
+            this.cmbCodePatient.ForeColor = System.Drawing.Color.White;
+            this.cmbCodePatient.FormattingEnabled = true;
+            this.cmbCodePatient.ItemHeight = 19;
+            this.cmbCodePatient.Location = new System.Drawing.Point(172, 42);
+            this.cmbCodePatient.Name = "cmbCodePatient";
+            this.cmbCodePatient.Size = new System.Drawing.Size(220, 27);
+            this.cmbCodePatient.TabIndex = 53;
+            // 
             // txtObservation
             // 
             this.txtObservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
@@ -339,7 +352,6 @@
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.panelTitleBar.Controls.Add(this.btnFermer);
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
@@ -347,19 +359,6 @@
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(1086, 52);
             this.panelTitleBar.TabIndex = 50;
-            // 
-            // btnFermer
-            // 
-            this.btnFermer.FlatAppearance.BorderSize = 0;
-            this.btnFermer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFermer.ForeColor = System.Drawing.Color.White;
-            this.btnFermer.Location = new System.Drawing.Point(1048, 3);
-            this.btnFermer.Name = "btnFermer";
-            this.btnFermer.Size = new System.Drawing.Size(35, 33);
-            this.btnFermer.TabIndex = 0;
-            this.btnFermer.Text = "X";
-            this.btnFermer.UseVisualStyleBackColor = true;
-            this.btnFermer.Click += new System.EventHandler(this.BtnFermer_Click);
             // 
             // lblTitle
             // 
@@ -374,20 +373,6 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Rendez Vous";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cmbCodePatient
-            // 
-            this.cmbCodePatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.cmbCodePatient.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCodePatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbCodePatient.Font = new System.Drawing.Font("Corbel", 12F);
-            this.cmbCodePatient.ForeColor = System.Drawing.Color.White;
-            this.cmbCodePatient.FormattingEnabled = true;
-            this.cmbCodePatient.ItemHeight = 19;
-            this.cmbCodePatient.Location = new System.Drawing.Point(172, 42);
-            this.cmbCodePatient.Name = "cmbCodePatient";
-            this.cmbCodePatient.Size = new System.Drawing.Size(220, 27);
-            this.cmbCodePatient.TabIndex = 53;
             // 
             // FormRendezVous
             // 
@@ -441,7 +426,6 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox txtObservation;
         private Bunifu.Framework.UI.BunifuCustomLabel lblObservation;
         private System.Windows.Forms.Panel panelTitleBar;
-        private System.Windows.Forms.Button btnFermer;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.ComboBox cmbCodePatient;
     }

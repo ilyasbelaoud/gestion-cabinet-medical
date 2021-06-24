@@ -171,6 +171,7 @@ namespace GestionCabinetMedical
         }
         private void BtnExporter_Click(object sender, EventArgs e)
         {
+            
             this.SaveDataInFile();
         }
         private void BtnImporter_Click(object sender, EventArgs e)
@@ -303,6 +304,23 @@ namespace GestionCabinetMedical
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void BtnSaveTxt_Click(object sender, EventArgs e)
+        {
+            this.saveFileDialog1.Title = "Select a file";
+            this.saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            saveFileDialog1.FilterIndex = 2;
+            saveFileDialog1.RestoreDirectory = true;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter sw = new StreamWriter(saveFileDialog1.FileName);
+                foreach (Patient p in this.f.Cbm.ListPatient)
+                {
+                    sw.WriteLine(p.ToString());
+                }
+                sw.Close();
             }
         }
     }

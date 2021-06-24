@@ -55,7 +55,7 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAjouter = new System.Windows.Forms.Button();
-            this.btnExporter = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.btnModifier = new System.Windows.Forms.Button();
             this.btnSupprimer = new System.Windows.Forms.Button();
             this.gb1 = new System.Windows.Forms.GroupBox();
@@ -63,11 +63,14 @@
             this.lblnote = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gb2 = new System.Windows.Forms.GroupBox();
+            this.btnSaveTxt = new System.Windows.Forms.Button();
             this.btnImporter = new System.Windows.Forms.Button();
             this.gb3 = new System.Windows.Forms.GroupBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.btnFermer = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dgPatient)).BeginInit();
             this.gb1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -396,7 +399,7 @@
             this.btnAjouter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAjouter.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjouter.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.btnAjouter.Location = new System.Drawing.Point(8, 26);
+            this.btnAjouter.Location = new System.Drawing.Point(8, 14);
             this.btnAjouter.Margin = new System.Windows.Forms.Padding(4);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(312, 42);
@@ -405,21 +408,21 @@
             this.btnAjouter.UseVisualStyleBackColor = true;
             this.btnAjouter.Click += new System.EventHandler(this.BtnAjouter_Click);
             // 
-            // btnExporter
+            // btnSave
             // 
-            this.btnExporter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExporter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExporter.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnExporter.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.btnExporter.Location = new System.Drawing.Point(8, 203);
-            this.btnExporter.Margin = new System.Windows.Forms.Padding(4);
-            this.btnExporter.Name = "btnExporter";
-            this.btnExporter.Size = new System.Drawing.Size(190, 42);
-            this.btnExporter.TabIndex = 41;
-            this.btnExporter.Text = "Exporter";
-            this.btnExporter.UseVisualStyleBackColor = true;
-            this.btnExporter.Click += new System.EventHandler(this.BtnExporter_Click);
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnSave.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.btnSave.Location = new System.Drawing.Point(8, 162);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(190, 42);
+            this.btnSave.TabIndex = 41;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.BtnExporter_Click);
             // 
             // btnModifier
             // 
@@ -428,7 +431,7 @@
             this.btnModifier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModifier.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnModifier.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.btnModifier.Location = new System.Drawing.Point(8, 144);
+            this.btnModifier.Location = new System.Drawing.Point(8, 112);
             this.btnModifier.Margin = new System.Windows.Forms.Padding(4);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(312, 42);
@@ -444,7 +447,7 @@
             this.btnSupprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSupprimer.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSupprimer.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.btnSupprimer.Location = new System.Drawing.Point(8, 86);
+            this.btnSupprimer.Location = new System.Drawing.Point(8, 62);
             this.btnSupprimer.Margin = new System.Windows.Forms.Padding(4);
             this.btnSupprimer.Name = "btnSupprimer";
             this.btnSupprimer.Size = new System.Drawing.Size(312, 42);
@@ -525,9 +528,10 @@
             // 
             this.gb2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gb2.Controls.Add(this.btnSaveTxt);
             this.gb2.Controls.Add(this.btnImporter);
             this.gb2.Controls.Add(this.btnAjouter);
-            this.gb2.Controls.Add(this.btnExporter);
+            this.gb2.Controls.Add(this.btnSave);
             this.gb2.Controls.Add(this.btnSupprimer);
             this.gb2.Controls.Add(this.btnModifier);
             this.gb2.Font = new System.Drawing.Font("Corbel", 11.25F);
@@ -539,13 +543,29 @@
             this.gb2.TabIndex = 45;
             this.gb2.TabStop = false;
             // 
+            // btnSaveTxt
+            // 
+            this.btnSaveTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSaveTxt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveTxt.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnSaveTxt.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.btnSaveTxt.Location = new System.Drawing.Point(8, 212);
+            this.btnSaveTxt.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSaveTxt.Name = "btnSaveTxt";
+            this.btnSaveTxt.Size = new System.Drawing.Size(314, 42);
+            this.btnSaveTxt.TabIndex = 45;
+            this.btnSaveTxt.Text = "Save to a Text file";
+            this.btnSaveTxt.UseVisualStyleBackColor = true;
+            this.btnSaveTxt.Click += new System.EventHandler(this.BtnSaveTxt_Click);
+            // 
             // btnImporter
             // 
             this.btnImporter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnImporter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImporter.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnImporter.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.btnImporter.Location = new System.Drawing.Point(206, 203);
+            this.btnImporter.Location = new System.Drawing.Point(206, 162);
             this.btnImporter.Margin = new System.Windows.Forms.Padding(4);
             this.btnImporter.Name = "btnImporter";
             this.btnImporter.Size = new System.Drawing.Size(114, 42);
@@ -608,6 +628,10 @@
             this.lblTitle.Text = "Patient";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // FormPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -660,7 +684,7 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox txtEmail;
         private System.Windows.Forms.DataGridView dgPatient;
         private System.Windows.Forms.Button btnAjouter;
-        private System.Windows.Forms.Button btnExporter;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnModifier;
         private System.Windows.Forms.Button btnSupprimer;
         private System.Windows.Forms.GroupBox gb1;
@@ -681,5 +705,8 @@
         private System.Windows.Forms.Button btnFermer;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.ComboBox cmbCodePatient;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button btnSaveTxt;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

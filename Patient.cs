@@ -50,5 +50,9 @@ namespace GestionCabinetMedical
             if ((this.Nom.ToLower()==p.Nom.ToLower()) && (this.Prenom.ToLower()==p.Prenom.ToLower())) return true;
             return false;
         }
+        public override string ToString()
+        {
+            return $"Code Patient: {this.codePatient}; Full Name: {this.nom} {this.prenom}; Birthday: {this.dateNaissance.ToShortDateString()}; Gender: {this.sexe}; Address: {this.adresse}; Phone Number: {this.tel}; E-mail: {this.email}";
+        }
     }
 }
