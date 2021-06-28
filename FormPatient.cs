@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-
 using System.Collections;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -19,6 +18,8 @@ namespace GestionCabinetMedical
         public FormPatient()
         {
             InitializeComponent();
+            this.dgPatient.ForeColor = this.BackColor;
+
         }
         public FormPatient(FormDashboard f):this()
         {

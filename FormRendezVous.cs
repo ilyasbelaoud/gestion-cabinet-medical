@@ -22,6 +22,8 @@ namespace GestionCabinetMedical
         public FormRendezVous()
         {
             InitializeComponent();
+            this.dgRendezVous.ForeColor = this.BackColor;
+
         }
 
         public FormRendezVous(FormDashboard f) : this()

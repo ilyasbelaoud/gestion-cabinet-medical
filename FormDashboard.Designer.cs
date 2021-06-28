@@ -418,7 +418,7 @@
             // 
             this.txtCodePatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtCodePatient.BorderColorFocused = System.Drawing.Color.DarkTurquoise;
-            this.txtCodePatient.BorderColorIdle = System.Drawing.Color.Black;
+            this.txtCodePatient.BorderColorIdle = System.Drawing.Color.DarkTurquoise;
             this.txtCodePatient.BorderColorMouseHover = System.Drawing.Color.DarkTurquoise;
             this.txtCodePatient.BorderThickness = 2;
             this.txtCodePatient.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -449,7 +449,7 @@
             // 
             this.txtNom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtNom.BorderColorFocused = System.Drawing.Color.DarkTurquoise;
-            this.txtNom.BorderColorIdle = System.Drawing.Color.Black;
+            this.txtNom.BorderColorIdle = System.Drawing.Color.DarkTurquoise;
             this.txtNom.BorderColorMouseHover = System.Drawing.Color.DarkTurquoise;
             this.txtNom.BorderThickness = 2;
             this.txtNom.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -480,7 +480,7 @@
             // 
             this.txtPrenom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtPrenom.BorderColorFocused = System.Drawing.Color.DarkTurquoise;
-            this.txtPrenom.BorderColorIdle = System.Drawing.Color.Black;
+            this.txtPrenom.BorderColorIdle = System.Drawing.Color.DarkTurquoise;
             this.txtPrenom.BorderColorMouseHover = System.Drawing.Color.DarkTurquoise;
             this.txtPrenom.BorderThickness = 2;
             this.txtPrenom.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -511,7 +511,7 @@
             // 
             this.txtAdresse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtAdresse.BorderColorFocused = System.Drawing.Color.DarkTurquoise;
-            this.txtAdresse.BorderColorIdle = System.Drawing.Color.Black;
+            this.txtAdresse.BorderColorIdle = System.Drawing.Color.DarkTurquoise;
             this.txtAdresse.BorderColorMouseHover = System.Drawing.Color.DarkTurquoise;
             this.txtAdresse.BorderThickness = 2;
             this.txtAdresse.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -566,7 +566,7 @@
             // 
             this.txtTelephone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtTelephone.BorderColorFocused = System.Drawing.Color.DarkTurquoise;
-            this.txtTelephone.BorderColorIdle = System.Drawing.Color.Black;
+            this.txtTelephone.BorderColorIdle = System.Drawing.Color.DarkTurquoise;
             this.txtTelephone.BorderColorMouseHover = System.Drawing.Color.DarkTurquoise;
             this.txtTelephone.BorderThickness = 2;
             this.txtTelephone.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -609,7 +609,7 @@
             // 
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtEmail.BorderColorFocused = System.Drawing.Color.DarkTurquoise;
-            this.txtEmail.BorderColorIdle = System.Drawing.Color.Black;
+            this.txtEmail.BorderColorIdle = System.Drawing.Color.DarkTurquoise;
             this.txtEmail.BorderColorMouseHover = System.Drawing.Color.DarkTurquoise;
             this.txtEmail.BorderThickness = 2;
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -674,7 +674,7 @@
             // 
             this.txtRechercher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtRechercher.BorderColorFocused = System.Drawing.Color.DarkTurquoise;
-            this.txtRechercher.BorderColorIdle = System.Drawing.Color.Black;
+            this.txtRechercher.BorderColorIdle = System.Drawing.Color.DarkTurquoise;
             this.txtRechercher.BorderColorMouseHover = System.Drawing.Color.DarkTurquoise;
             this.txtRechercher.BorderThickness = 2;
             this.txtRechercher.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -718,7 +718,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1086, 660);
             this.Name = "FormDashboard";
-            this.Text = "FormDashboard";
+            this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.FormDashboard_Load);
             this.groupBox7.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
