@@ -15,7 +15,7 @@ namespace GestionCabinetMedical
     [Serializable]
     public partial class FormRendezVous : Form
     {
-        Form1 f = new Form1();
+        FormDashboard f = new FormDashboard();
         CabinetMedical cm = new CabinetMedical();
 
 
@@ -24,18 +24,9 @@ namespace GestionCabinetMedical
             InitializeComponent();
         }
 
-        public FormRendezVous(Form1 f) : this()
+        public FormRendezVous(FormDashboard f) : this()
         {
             this.f = f;
-        }
-
-        public void chargerCombo()
-        {
-            this.cmbCodePatient.Items.Clear();
-            foreach (Patient p in this.f.Cbm.ListPatient)
-            {
-                this.cmbCodePatient.Items.Add(p.CodePatient);
-            }
         }
 
         public void chargerHeureCombo()
@@ -52,7 +43,7 @@ namespace GestionCabinetMedical
 
         private void Vider()
         {
-            this.cmbCodePatient.Text = null;
+            this.txtCodePatient.Text = null;
             this.dtpDateRV.Value = DateTime.Now.Date;
             this.lblnote.Visible = false;
             this.cmbHours.Text = null;
@@ -63,9 +54,8 @@ namespace GestionCabinetMedical
 
         private void FormRendezVous_Load(object sender, EventArgs e)
         {
+            ImporterDataFromFile();
             this.chargerHeureCombo();
-            this.chargerCombo();
-            this.ImporterDataFromFile();
             this.Vider();
         }
 
@@ -73,7 +63,9 @@ namespace GestionCabinetMedical
         {
             try
             {
-                int codePatient = int.Parse(this.cmbCodePatient.Text);
+                if (txtCodePatient.Text == "") throw new Exception("Remplir tout les chams!");
+                
+                    int codePatient = int.Parse(this.txtCodePatient.Text);
 
                 if (this.dtpDateRV.Value.Date < DateTime.Now.Date)
                 {
@@ -92,14 +84,13 @@ namespace GestionCabinetMedical
                 string observation = txtObservation.Text;
 
                 Patient p = this.f.Cbm.TrouverPatient(codePatient);
-                
+                if (p == null) throw new Exception("Patient n'est pas trouver !!");
                 if (p.RendezVous != null) throw new Exception("Patient a deja un rendez vous!");
 
                 RendezVous r = new RendezVous(codePatient, dateRendezVous, heureRendezVous, observation);
                 this.f.Cbm.AjouterRDV(r);
                 p.RendezVous = r;
                 this.ChargerData();
-                this.chargerCombo();
                 this.Vider();
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK); }
@@ -155,13 +146,12 @@ namespace GestionCabinetMedical
                 DialogResult res = MessageBox.Show("Voullez vous vraiment supprimer ce rendez vous ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (res == DialogResult.OK)
                 {
-                    int indice = int.Parse(cmbCodePatient.SelectedItem.ToString());
+                    int indice = int.Parse(txtCodePatient.Text);
                     RendezVous rv = this.f.Cbm.TrouverPatient(indice).RendezVous;
                     if (rv!=null)
                     {
                         this.f.Cbm.TrouverPatient(indice).RendezVous = null;
                         this.f.Cbm.ListRendezVous.Remove(this.f.Cbm.TrouverRendezVous(indice));
-                        this.chargerCombo();
                         this.ChargerData();
                         this.Vider();
                     }
@@ -169,6 +159,16 @@ namespace GestionCabinetMedical
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void Gb1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtCodePatient_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

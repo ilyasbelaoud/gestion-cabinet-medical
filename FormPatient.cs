@@ -1,8 +1,9 @@
 ﻿using System;
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
 
 namespace GestionCabinetMedical
@@ -10,7 +11,7 @@ namespace GestionCabinetMedical
     [Serializable]
     public partial class FormPatient : Form
     {
-        Form1 f = new Form1();
+        FormDashboard f = new FormDashboard();
         CabinetMedical cm = new CabinetMedical();
 
         private static int nbr;
@@ -19,13 +20,13 @@ namespace GestionCabinetMedical
         {
             InitializeComponent();
         }
-        public FormPatient(Form1 f):this()
+        public FormPatient(FormDashboard f):this()
         {
             this.f=f;
         }
         private void FormPatient_Load(object sender, EventArgs e)
         {
-            this.ImporterDataFromFile();
+            ImporterDataFromFile();
             this.Vider();
         }
 

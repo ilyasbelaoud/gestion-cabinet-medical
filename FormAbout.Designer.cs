@@ -107,9 +107,9 @@
             this.label8.Location = new System.Drawing.Point(60, 80);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(135, 29);
+            this.label8.Size = new System.Drawing.Size(136, 29);
             this.label8.TabIndex = 26;
-            this.label8.Text = "Version 1.0.0";
+            this.label8.Text = "Version 1.2.0";
             // 
             // label9
             // 
@@ -129,7 +129,7 @@
             this.splitter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(519, 648);
+            this.splitter1.Size = new System.Drawing.Size(519, 660);
             this.splitter1.TabIndex = 24;
             this.splitter1.TabStop = false;
             // 
@@ -173,7 +173,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1093, 648);
+            this.ClientSize = new System.Drawing.Size(1086, 660);
             this.ControlBox = false;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.linkLabel2);
@@ -187,7 +187,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Corbel", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(1086, 660);
             this.Name = "FormAbout";
             this.Text = "FormAbout";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

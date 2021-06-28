@@ -52,7 +52,7 @@ namespace GestionCabinetMedical
         }
         public override string ToString()
         {
-            return $"Code Patient: {this.codePatient}; Full Name: {this.nom} {this.prenom}; Birthday: {this.dateNaissance.ToShortDateString()}; Gender: {this.sexe}; Address: {this.adresse}; Phone Number: {this.tel}; E-mail: {this.email}";
+            return $"{this.codePatient};{this.nom} {this.prenom};{this.dateNaissance.ToShortDateString()};{this.sexe};{this.adresse};{this.tel};{this.email}";
         }
     }
 }

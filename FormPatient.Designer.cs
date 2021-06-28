@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -66,9 +66,6 @@
             this.btnSaveTxt = new System.Windows.Forms.Button();
             this.btnImporter = new System.Windows.Forms.Button();
             this.gb3 = new System.Windows.Forms.GroupBox();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.btnFermer = new System.Windows.Forms.Button();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dgPatient)).BeginInit();
@@ -76,7 +73,6 @@
             this.groupBox1.SuspendLayout();
             this.gb2.SuspendLayout();
             this.gb3.SuspendLayout();
-            this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel1
@@ -316,14 +312,14 @@
             this.dgPatient.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.dgPatient.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgPatient.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Corbel", 11.25F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgPatient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Corbel", 11.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgPatient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgPatient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgPatient.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -339,7 +335,7 @@
             this.dgPatient.Margin = new System.Windows.Forms.Padding(4);
             this.dgPatient.Name = "dgPatient";
             this.dgPatient.ReadOnly = true;
-            this.dgPatient.Size = new System.Drawing.Size(1105, 365);
+            this.dgPatient.Size = new System.Drawing.Size(1047, 339);
             this.dgPatient.TabIndex = 39;
             this.dgPatient.Click += new System.EventHandler(this.DgPatient_Click);
             // 
@@ -402,7 +398,7 @@
             this.btnAjouter.Location = new System.Drawing.Point(8, 14);
             this.btnAjouter.Margin = new System.Windows.Forms.Padding(4);
             this.btnAjouter.Name = "btnAjouter";
-            this.btnAjouter.Size = new System.Drawing.Size(312, 42);
+            this.btnAjouter.Size = new System.Drawing.Size(254, 42);
             this.btnAjouter.TabIndex = 40;
             this.btnAjouter.Text = "Ajouter";
             this.btnAjouter.UseVisualStyleBackColor = true;
@@ -418,7 +414,7 @@
             this.btnSave.Location = new System.Drawing.Point(8, 162);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(190, 42);
+            this.btnSave.Size = new System.Drawing.Size(132, 42);
             this.btnSave.TabIndex = 41;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -434,7 +430,7 @@
             this.btnModifier.Location = new System.Drawing.Point(8, 112);
             this.btnModifier.Margin = new System.Windows.Forms.Padding(4);
             this.btnModifier.Name = "btnModifier";
-            this.btnModifier.Size = new System.Drawing.Size(312, 42);
+            this.btnModifier.Size = new System.Drawing.Size(254, 42);
             this.btnModifier.TabIndex = 42;
             this.btnModifier.Text = "Modifier";
             this.btnModifier.UseVisualStyleBackColor = true;
@@ -450,7 +446,7 @@
             this.btnSupprimer.Location = new System.Drawing.Point(8, 62);
             this.btnSupprimer.Margin = new System.Windows.Forms.Padding(4);
             this.btnSupprimer.Name = "btnSupprimer";
-            this.btnSupprimer.Size = new System.Drawing.Size(312, 42);
+            this.btnSupprimer.Size = new System.Drawing.Size(254, 42);
             this.btnSupprimer.TabIndex = 43;
             this.btnSupprimer.Text = "Supprimer";
             this.btnSupprimer.UseVisualStyleBackColor = true;
@@ -476,7 +472,7 @@
             this.gb1.Controls.Add(this.txtPrenom);
             this.gb1.Controls.Add(this.txtNom);
             this.gb1.Font = new System.Drawing.Font("Corbel", 11.25F);
-            this.gb1.Location = new System.Drawing.Point(18, 59);
+            this.gb1.Location = new System.Drawing.Point(18, 13);
             this.gb1.Margin = new System.Windows.Forms.Padding(4);
             this.gb1.Name = "gb1";
             this.gb1.Padding = new System.Windows.Forms.Padding(4);
@@ -535,11 +531,11 @@
             this.gb2.Controls.Add(this.btnSupprimer);
             this.gb2.Controls.Add(this.btnModifier);
             this.gb2.Font = new System.Drawing.Font("Corbel", 11.25F);
-            this.gb2.Location = new System.Drawing.Point(803, 59);
+            this.gb2.Location = new System.Drawing.Point(803, 13);
             this.gb2.Margin = new System.Windows.Forms.Padding(4);
             this.gb2.Name = "gb2";
             this.gb2.Padding = new System.Windows.Forms.Padding(4);
-            this.gb2.Size = new System.Drawing.Size(328, 262);
+            this.gb2.Size = new System.Drawing.Size(270, 262);
             this.gb2.TabIndex = 45;
             this.gb2.TabStop = false;
             // 
@@ -553,7 +549,7 @@
             this.btnSaveTxt.Location = new System.Drawing.Point(8, 212);
             this.btnSaveTxt.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveTxt.Name = "btnSaveTxt";
-            this.btnSaveTxt.Size = new System.Drawing.Size(314, 42);
+            this.btnSaveTxt.Size = new System.Drawing.Size(256, 42);
             this.btnSaveTxt.TabIndex = 45;
             this.btnSaveTxt.Text = "Save to a Text file";
             this.btnSaveTxt.UseVisualStyleBackColor = true;
@@ -565,7 +561,7 @@
             this.btnImporter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImporter.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnImporter.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.btnImporter.Location = new System.Drawing.Point(206, 162);
+            this.btnImporter.Location = new System.Drawing.Point(148, 162);
             this.btnImporter.Margin = new System.Windows.Forms.Padding(4);
             this.btnImporter.Name = "btnImporter";
             this.btnImporter.Size = new System.Drawing.Size(114, 42);
@@ -581,52 +577,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gb3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.gb3.Controls.Add(this.dgPatient);
-            this.gb3.Location = new System.Drawing.Point(12, 329);
+            this.gb3.Location = new System.Drawing.Point(12, 283);
             this.gb3.Margin = new System.Windows.Forms.Padding(4);
             this.gb3.Name = "gb3";
             this.gb3.Padding = new System.Windows.Forms.Padding(4);
-            this.gb3.Size = new System.Drawing.Size(1119, 390);
+            this.gb3.Size = new System.Drawing.Size(1061, 364);
             this.gb3.TabIndex = 46;
             this.gb3.TabStop = false;
-            // 
-            // panelTitleBar
-            // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.panelTitleBar.Controls.Add(this.btnFermer);
-            this.panelTitleBar.Controls.Add(this.lblTitle);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
-            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1144, 52);
-            this.panelTitleBar.TabIndex = 47;
-            // 
-            // btnFermer
-            // 
-            this.btnFermer.FlatAppearance.BorderSize = 0;
-            this.btnFermer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFermer.ForeColor = System.Drawing.Color.White;
-            this.btnFermer.Location = new System.Drawing.Point(1077, 12);
-            this.btnFermer.Name = "btnFermer";
-            this.btnFermer.Size = new System.Drawing.Size(35, 33);
-            this.btnFermer.TabIndex = 0;
-            this.btnFermer.Text = "X";
-            this.btnFermer.UseVisualStyleBackColor = true;
-            this.btnFermer.Click += new System.EventHandler(this.BtnFermer_Click);
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.lblTitle.Location = new System.Drawing.Point(56, 17);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(112, 32);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Patient";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // openFileDialog1
             // 
@@ -639,8 +596,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1144, 732);
-            this.Controls.Add(this.panelTitleBar);
+            this.ClientSize = new System.Drawing.Size(1086, 660);
             this.Controls.Add(this.gb3);
             this.Controls.Add(this.gb2);
             this.Controls.Add(this.gb1);
@@ -659,8 +615,6 @@
             this.groupBox1.PerformLayout();
             this.gb2.ResumeLayout(false);
             this.gb3.ResumeLayout(false);
-            this.panelTitleBar.ResumeLayout(false);
-            this.panelTitleBar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -701,9 +655,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.Label lblnote;
         private System.Windows.Forms.Button btnImporter;
-        private System.Windows.Forms.Panel panelTitleBar;
-        private System.Windows.Forms.Button btnFermer;
-        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.ComboBox cmbCodePatient;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnSaveTxt;

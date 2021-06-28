@@ -41,7 +41,6 @@
             this.btnExporter = new System.Windows.Forms.Button();
             this.btnSupprimer = new System.Windows.Forms.Button();
             this.gb1 = new System.Windows.Forms.GroupBox();
-            this.cmbCodePatient = new System.Windows.Forms.ComboBox();
             this.txtObservation = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.cmbMinutes = new System.Windows.Forms.ComboBox();
             this.cmbHours = new System.Windows.Forms.ComboBox();
@@ -51,13 +50,11 @@
             this.dtpDateRV = new System.Windows.Forms.DateTimePicker();
             this.lblDateRV = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblObservation = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
+            this.txtCodePatient = new System.Windows.Forms.TextBox();
             this.gb3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgRendezVous)).BeginInit();
             this.gb2.SuspendLayout();
             this.gb1.SuspendLayout();
-            this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb3
@@ -67,11 +64,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gb3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.gb3.Controls.Add(this.dgRendezVous);
-            this.gb3.Location = new System.Drawing.Point(11, 329);
+            this.gb3.Location = new System.Drawing.Point(9, 283);
             this.gb3.Margin = new System.Windows.Forms.Padding(4);
             this.gb3.Name = "gb3";
             this.gb3.Padding = new System.Windows.Forms.Padding(4);
-            this.gb3.Size = new System.Drawing.Size(1064, 372);
+            this.gb3.Size = new System.Drawing.Size(1064, 364);
             this.gb3.TabIndex = 49;
             this.gb3.TabStop = false;
             // 
@@ -102,7 +99,7 @@
             this.dgRendezVous.Location = new System.Drawing.Point(8, 17);
             this.dgRendezVous.Margin = new System.Windows.Forms.Padding(4);
             this.dgRendezVous.Name = "dgRendezVous";
-            this.dgRendezVous.Size = new System.Drawing.Size(1050, 347);
+            this.dgRendezVous.Size = new System.Drawing.Size(1050, 339);
             this.dgRendezVous.TabIndex = 39;
             // 
             // Column1
@@ -134,7 +131,7 @@
             this.gb2.Controls.Add(this.btnExporter);
             this.gb2.Controls.Add(this.btnSupprimer);
             this.gb2.Font = new System.Drawing.Font("Corbel", 11.25F);
-            this.gb2.Location = new System.Drawing.Point(770, 59);
+            this.gb2.Location = new System.Drawing.Point(768, 13);
             this.gb2.Margin = new System.Windows.Forms.Padding(4);
             this.gb2.Name = "gb2";
             this.gb2.Padding = new System.Windows.Forms.Padding(4);
@@ -211,7 +208,7 @@
             // 
             // gb1
             // 
-            this.gb1.Controls.Add(this.cmbCodePatient);
+            this.gb1.Controls.Add(this.txtCodePatient);
             this.gb1.Controls.Add(this.txtObservation);
             this.gb1.Controls.Add(this.cmbMinutes);
             this.gb1.Controls.Add(this.cmbHours);
@@ -222,27 +219,14 @@
             this.gb1.Controls.Add(this.lblDateRV);
             this.gb1.Controls.Add(this.lblObservation);
             this.gb1.Font = new System.Drawing.Font("Corbel", 11.25F);
-            this.gb1.Location = new System.Drawing.Point(11, 59);
+            this.gb1.Location = new System.Drawing.Point(9, 13);
             this.gb1.Margin = new System.Windows.Forms.Padding(4);
             this.gb1.Name = "gb1";
             this.gb1.Padding = new System.Windows.Forms.Padding(4);
             this.gb1.Size = new System.Drawing.Size(751, 262);
             this.gb1.TabIndex = 47;
             this.gb1.TabStop = false;
-            // 
-            // cmbCodePatient
-            // 
-            this.cmbCodePatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.cmbCodePatient.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCodePatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbCodePatient.Font = new System.Drawing.Font("Corbel", 12F);
-            this.cmbCodePatient.ForeColor = System.Drawing.Color.White;
-            this.cmbCodePatient.FormattingEnabled = true;
-            this.cmbCodePatient.ItemHeight = 19;
-            this.cmbCodePatient.Location = new System.Drawing.Point(172, 42);
-            this.cmbCodePatient.Name = "cmbCodePatient";
-            this.cmbCodePatient.Size = new System.Drawing.Size(220, 27);
-            this.cmbCodePatient.TabIndex = 53;
+            this.gb1.Enter += new System.EventHandler(this.Gb1_Enter);
             // 
             // txtObservation
             // 
@@ -349,38 +333,21 @@
             this.lblObservation.TabIndex = 7;
             this.lblObservation.Text = "Observation";
             // 
-            // panelTitleBar
+            // txtCodePatient
             // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.panelTitleBar.Controls.Add(this.lblTitle);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
-            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1086, 52);
-            this.panelTitleBar.TabIndex = 50;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.lblTitle.Location = new System.Drawing.Point(27, 17);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(196, 32);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Rendez Vous";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtCodePatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtCodePatient.Location = new System.Drawing.Point(172, 51);
+            this.txtCodePatient.Name = "txtCodePatient";
+            this.txtCodePatient.Size = new System.Drawing.Size(220, 26);
+            this.txtCodePatient.TabIndex = 54;
+            this.txtCodePatient.TextChanged += new System.EventHandler(this.TxtCodePatient_TextChanged);
             // 
             // FormRendezVous
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1086, 714);
-            this.Controls.Add(this.panelTitleBar);
+            this.ClientSize = new System.Drawing.Size(1086, 660);
             this.Controls.Add(this.gb3);
             this.Controls.Add(this.gb2);
             this.Controls.Add(this.gb1);
@@ -396,8 +363,6 @@
             this.gb2.ResumeLayout(false);
             this.gb1.ResumeLayout(false);
             this.gb1.PerformLayout();
-            this.panelTitleBar.ResumeLayout(false);
-            this.panelTitleBar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -425,8 +390,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtObservation;
         private Bunifu.Framework.UI.BunifuCustomLabel lblObservation;
-        private System.Windows.Forms.Panel panelTitleBar;
-        private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.ComboBox cmbCodePatient;
+        private System.Windows.Forms.TextBox txtCodePatient;
     }
 }
