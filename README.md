@@ -10,8 +10,8 @@ Visual studio 2019 - .NET Framwork - C# - Bunifu Framework - Windows Form Applic
 *The english version will be available soon.
 
 ---
-![](https://github.com/ilyasbelaoud/gestion-cabinet-medical/blob/master/images/1.PNG)
-![](https://github.com/ilyasbelaoud/gestion-cabinet-medical/blob/master/images/2.PNG)
+![](https://github.com/ilyasbelaoud/gestion-cabinet-medical/blob/master/images/1.JPG)
+![](https://github.com/ilyasbelaoud/gestion-cabinet-medical/blob/master/images/2.JPG)
 ![](https://github.com/ilyasbelaoud/gestion-cabinet-medical/blob/master/images/3.PNG)
 
 
